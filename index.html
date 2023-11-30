@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Sunset Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-main">
+        <div class="search-box-top">
+            <input type="text" id="citySearchbar" placeholder="Enter City Name">
+            <div class="location-search-box">
+                <button id="locationButton" onclick="getUserLocation()">Use My Location</button>
+            </div>
+            <button id="searchButton" onclick="getGeoData()">Search</button>
+        </div>
+      
+        <div class="dashboard-main">
+            <div id="PanelToday" class="day-panel-today">
+                <h2>Today</h2>
+                <p>Date: <span id="dateToday" class="date-today"></span></p>
+                <p>Sunrise: <span id="sunriseToday" class="sunrise-today"></span></p>
+                <p>Sunset: <span id="sunsetToday" class="sunset-today"></span></p>
+                <p>Dawn: <span id="dawnToday" class="dawn-today"></span></p>
+                <p>Dusk: <span id="duskToday" class="dusk-today"></span></p>
+                <p>Day Length: <span id="daylengthToday" class="daylength-today"></span></p>
+                <p>Solar Noon: <span id="solarnoonToday" class="solarnoon-today"></span></p>
+                <p>Time Zone: <span id="timezoneToday" class="timezone-today"></span></p>
+            </div>
+           
+            <div id="PanelTomorrow" class="day-panel-tomorrow">
+                <h2>Tomorrow</h2>
+                <p>Date: <span id="dateTomorrow" class="date-tomorrow"></span></p>
+                <p>Sunrise: <span id="sunriseTomorrow" class="sunrise-tomorrow"></span></p>
+                <p>Sunset: <span id="sunsetTomorrow" class="sunset-tomorrow"></span></p>
+                <p>Dawn: <span id="dawnTomorrow" class="dawn-tomorrow"></span></p>
+                <p>Dusk: <span id="duskTomorrow" class="dusk-tomorrow"></span></p>
+                <p>Day Length: <span id="daylengthTomorrow" class="daylength-tomorrow"></span></p>
+                <p>Solar Noon: <span id="solarnoonTomorrow" class="solarnoon-tomorrow"></span></p>
+                <p>Time Zone: <span id="timezoneTomorrow" class="timezone-tomorrow"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

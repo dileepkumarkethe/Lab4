@@ -1,0 +1,126 @@
+/* Styles for the main container */
+.container-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles for the search box at the top */
+.search-box-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Styles for the search input */
+#citySearchbar {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styles for the location search box */
+.location-search-box {
+    margin-right: 10px;
+}
+
+/* Styles for buttons */
+#locationButton,
+#searchButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#locationButton:hover,
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the dashboard panels */
+.dashboard-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Styles for each day panel */
+.day-panel-today,
+.day-panel-tomorrow {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styles for the headings within panels */
+.day-panel-today h2,
+.day-panel-tomorrow h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Styles for the spans displaying data */
+.date-today, .date-tomorrow,
+.sunrise-today, .sunrise-tomorrow,
+.sunset-today, .sunset-tomorrow,
+.dawn-today, .dawn-tomorrow,
+.dusk-today, .dusk-tomorrow,
+.daylength-today, .daylength-tomorrow,
+.solarnoon-today, .solarnoon-tomorrow,
+.timezone-today, .timezone-tomorrow {
+    font-weight: bold;
+    color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+    /* Stack the dashboard panels vertically */
+    .dashboard-main {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make search bar and buttons larger for easier interaction */
+    #citySearchbar, #locationButton, #searchButton {
+        font-size: 16px; /* Larger font size */
+        padding: 15px; /* Larger padding */
+    }
+
+    /* Adjust margins and paddings for smaller screens */
+    .container-main {
+        padding: 10px;
+    }
+
+    .search-box-top {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: stretch; /* Stretch to fill width */
+    }
+
+    .location-search-box,
+    #searchButton {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for phone screens */
+    #citySearchbar, #locationButton, #searchButton {
+        font-size: 18px; /* Even larger font size for smaller screens */
+    }
+
+    .day-panel-today, .day-panel-tomorrow {
+        padding: 15px; /* Adjust padding for smaller space */
+    }
+
+    /* Increase font size for readability */
+    .day-panel-today h2, .day-panel-tomorrow h2,
+    .day-panel-today p, .day-panel-tomorrow p {
+        font-size: 16px;
+    }
+}
